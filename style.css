@@ -99,26 +99,28 @@ main {
     /* border-left: 1px solid var(--light-border-color); */
 }
 
-.portrait-circle {
-    width: 100%;
-    margin: 0;
-    overflow: hidden;
-}
-
-
-.portrait {
+.square-img {
     aspect-ratio: 1/1;
     object-fit: cover;
     width: 100%;
     height: auto;
-    border-radius: 0.5rem 0.5rem 0 0;
 }
 
 .about-me {
     margin: 1rem auto;
-    border-radius: var(--sm-border-radius);
+    border-radius: var(--lg-border-radius);
+    overflow: hidden;
     display: flex;
     flex-direction: column;
+
+    color: var(--dark-text-color);
+    background: var(--content-bg-color-light2);
+    background:
+        linear-gradient(0deg, var(--content-bg-color-light2), var(--content-bg-color-light1) 100%),
+        linear-gradient(75deg, var(--content-bg-color-light3), var(--content-bg-color-light4) 100%);
+
+    box-shadow: 3px 3px 5px -3px rgba(0, 0, 0, 0.5);
+    text-shadow: 1px 1px 3px rgba(129, 129, 129, 0.1);
 }
 
 .about-me-text>h1 {
@@ -131,13 +133,4 @@ main {
 .about-me-text {
     padding: 1rem 2rem;
     font-size: 20px;
-    border-radius: 0 0 0.5rem 0.5rem;
-    color: var(--dark-text-color);
-    background: var(--content-bg-color-light2);
-    background:
-        linear-gradient(0deg, var(--content-bg-color-light2), var(--content-bg-color-light1) 100%),
-        linear-gradient(75deg, var(--content-bg-color-light3), var(--content-bg-color-light4) 100%);
-
-    box-shadow: 3px 3px 3px -3px rgba(0, 0, 0, 0.5);
-    text-shadow: 1px 1px 3px rgba(129, 129, 129, 0.1);
 }
