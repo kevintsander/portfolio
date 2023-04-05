@@ -12,8 +12,8 @@
     --dark-border-color: hsla(226, 40%, 5%, 0.5);
     --content-bg-color-light1: hsla(135, 90%, 60%, 0.5);
     --content-bg-color-light2: hsla(135, 90%, 60%, 0.6);
-    --content-bg-color-light3: hsla(340, 90%, 60%, 0.5);
-    --content-bg-color-light4: hsla(340, 90%, 60%, 0.6);
+    --content-bg-color-light3: hsla(332, 50%, 50%, 0.5);
+    --content-bg-color-light4: hsla(332, 50%, 50%, 0.6);
     --content-bg-color-1: hsl(226, 80%, 95%, 0.3);
 }
 
@@ -107,7 +107,7 @@ main {
 }
 
 .card {
-    margin: 1rem auto;
+    /* margin: 1rem auto; */
     border-radius: var(--lg-border-radius);
     overflow: hidden;
     display: flex;
@@ -132,14 +132,37 @@ main {
 }
 
 
-.about-me-text>h1 {
+.card-text-lg>h1 {
     font-size: 3rem;
     line-height: 1;
     padding: 0;
     margin: 0;
 }
 
-.about-me-text {
+.card-text-lg {
     padding: 1rem 2rem;
     font-size: 20px;
+}
+
+.card-text-sm>p {
+    padding: 0;
+    margin: 0;
+}
+
+.card-text-sm>h1 {
+    font-size: 2rem;
+    line-height: 1;
+    padding: 0;
+    margin: 0;
+}
+
+.card-text-sm {
+    padding: 1rem 2rem;
+    font-size: 16px;
+}
+
+.projects {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
 }
