@@ -6,7 +6,7 @@
     --bg-color2: hsl(226, 28%, 19%);
     --body-bg-color: hsla(226, 50%, 98%, 0.1);
     --light-text-color: hsl(226, 40%, 95%);
-    --dark-text-color: hsla(226, 10%, 20%);
+    --dark-text-color: hsla(226, 10%, 10%);
     --light-border-color: hsla(226, 40%, 95%, 1);
     --light-border-color-transparent: hsla(226, 40%, 95%, 0.5);
     --dark-border-color: hsla(226, 40%, 5%, 0.5);
@@ -59,11 +59,16 @@ main {
     grid-area: main;
 }
 
+.img-shadow {
+    filter: drop-shadow(1px 1px 3px hsla(1, 0%, 0%, 0.5));
+}
+
 .header-container {
     display: flex;
     gap: 4rem;
     margin: 1rem;
     align-items: center;
+    text-shadow: 1px 1px 3px hsla(1, 0%, 0%, 0.5);
 }
 
 .title-card {
@@ -75,7 +80,6 @@ main {
     font-size: 10rem;
     margin: 0 0 -2rem 0;
     white-space: nowrap;
-    text-shadow: 1px 1px 3px hsla(1, 0%, 0%, 0.5);
 }
 
 .subline {
@@ -109,6 +113,10 @@ main {
     height: auto;
 }
 
+.top-border-r-lg {
+    border-radius: var(--lg-border-radius) var(--lg-border-radius) 0 0;
+}
+
 .card {
     /* position: relative; */
     /* margin: 1rem auto; */
@@ -129,7 +137,7 @@ main {
 }
 
 .card-bg-2 {
-    color: var(--light-text-color);
+    color: var(--dark-text-color);
     background: var(--content-bg-color-light3);
     background:
         linear-gradient(75deg, var(--content-bg-color-light3), var(--content-bg-color-light4) 100%);
@@ -143,18 +151,28 @@ main {
     position: absolute;
     max-width: calc(100% - 4rem);
     padding: 0.5rem 2rem;
+}
+
+.card-title-top-right {
+    position: absolute;
+    top: 1rem;
+    right: -0.5rem;
+}
+
+.card-title-top-left {
+    position: absolute;
     top: 1rem;
     left: -0.5rem;
 }
 
 .card-title-lg {
-    font-size: 1.5rem;
+    font-size: 3rem;
     padding: 0rem 2rem;
     border-radius: var(--sm-border-radius);
 }
 
 .card-title-sm {
-    font-size: 1.2rem;
+    font-size: 2rem;
     padding: 0rem 1.5rem;
     border-radius: var(--sm-border-radius);
 }
@@ -190,7 +208,7 @@ main {
 
 .card-text-sm {
     padding: 1rem 2rem;
-    font-size: 16px;
+    font-size: 18px;
 }
 
 .projects {
