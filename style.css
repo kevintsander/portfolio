@@ -18,11 +18,19 @@
     --content-bg-color-1: hsl(226, 80%, 95%, 0.3);
 }
 
+
 html {
+    box-sizing: border-box;
     background: var(--bg-color1);
     background: url(./images/photos/aurora-borealis-bg-3000x2000.jpg) no-repeat center top fixed var(--bg-color1);
     /* linear-gradient(90deg, var(--bg-color1) 0%, var(--bg-color2) 50%, var(--bg-color1) 100%); */
     margin: 1rem;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
 }
 
 body {
@@ -113,8 +121,12 @@ main {
     height: auto;
 }
 
-.top-border-r-lg {
+.card-img-top {
+    opacity: 0.85;
+    margin: 0.25rem;
+    width: calc(100% - (2 * 0.25rem));
     border-radius: var(--lg-border-radius) var(--lg-border-radius) 0 0;
+    /* border: 1px solid purple; */
 }
 
 .card {
