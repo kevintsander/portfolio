@@ -13,8 +13,8 @@
     --content-title-bg-color1: hsla(135, 50%, 10%, 0.8);
     --content-bg-color-light1: hsla(135, 90%, 60%, 0.7);
     --content-bg-color-light2: hsla(135, 90%, 60%, 0.6);
-    --content-bg-color-light3: hsla(332, 80%, 55%, 0.7);
-    --content-bg-color-light4: hsla(332, 80%, 55%, 0.6);
+    --content-bg-color-light3: hsla(340, 80%, 55%, 0.7);
+    --content-bg-color-light4: hsla(340, 80%, 55%, 0.6);
     --content-bg-color-1: hsl(226, 80%, 95%, 0.3);
 }
 
@@ -214,4 +214,11 @@ main {
     display: grid;
     gap: 1rem;
     grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
+}
+
+footer {
+    grid-area: footer;
+    background: hsla(214, 75%, 25%, 0.7);
+    padding: 0.5rem;
+    margin: 1rem 0 -2rem 0;
 }
