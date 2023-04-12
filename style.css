@@ -125,6 +125,7 @@ main {
     margin: 0.25rem;
     width: calc(100% - (2 * 0.25rem));
     border-radius: var(--lg-border-radius);
+
 }
 
 .card {
