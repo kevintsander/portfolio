@@ -168,16 +168,30 @@ main {
     position: relative;
 }
 
-.card .card-header.card-header-tr {
-    position: absolute;
-    top: 1rem;
+.card .card-header {
+    width: fit-content;
+    position: relative;
+}
+
+.card .card-header.card-header-right {
+    margin-left: auto;
     right: -0.5rem;
 }
 
-.card .card-header.card-header-tl {
+.card .card-header.card-header-left {
+    left: -0.5rem;
+}
+
+/* if header inside img conatiner, position over top of img */
+.card .card-img-container>.card-header.card-header-right {
     position: absolute;
     top: 1rem;
-    left: -0.5rem;
+}
+
+/* if header inside img conatiner, position over top of img */
+.card .card-img-container>.card-header.card-header-left {
+    position: absolute;
+    top: 1rem;
 }
 
 .card .card-header.card-header-lg {
