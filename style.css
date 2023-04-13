@@ -168,12 +168,6 @@ main {
     position: relative;
 }
 
-.card .card-header {
-    position: absolute;
-    max-width: calc(100% - 4rem);
-    padding: 0.5rem 2rem;
-}
-
 .card .card-header.card-header-tr {
     position: absolute;
     top: 1rem;
@@ -186,25 +180,25 @@ main {
     left: -0.5rem;
 }
 
-.card.card-text-lg .card-header {
+.card .card-header.card-header-lg {
     font-size: 3rem;
     padding: 0rem 2rem;
     border-radius: var(--sm-border-radius);
 }
 
-.card.card-text-sm .card-header {
+.card .card-header.card-header-sm {
     font-size: 2rem;
     padding: 0rem 1.5rem;
     border-radius: var(--sm-border-radius);
 }
 
-.card.card-text-lg p {
+.card .card-text-lg {
     font-size: 20px;
     margin: 1rem 2rem;
     padding: 0;
 }
 
-.card.card-text-sm p {
+.card .card-text-sm {
     font-size: 18px;
     padding: 0.125rem .5rem;
     margin: 0;
