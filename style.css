@@ -218,7 +218,7 @@ main {
 
 footer {
     grid-area: footer;
-    background: hsla(214, 75%, 25%, 0.7);
+    background: hsla(230, 60%, 30%, 0.5);
     padding: 0.5rem;
-    margin: 1rem 0 -2rem 0;
+    margin: 4rem 0 -2rem 0;
 }
