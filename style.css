@@ -150,19 +150,23 @@ main {
     height: auto;
 }
 
-.card-img-top {
-    opacity: 0.85;
-    margin: 0;
-    width: 100%;
+.card-header-img {
     border-radius: var(--lg-border-radius);
 
 }
 
 .card {
+    position: relative;
     border-radius: var(--lg-border-radius);
     box-shadow: 3px 3px 5px -3px rgba(0, 0, 0, 0.5);
     text-shadow: 1px 1px 3px rgba(129, 129, 129, 0.1);
     padding: 0.25rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.card .card-content {
+    flex: 1;
 }
 
 .card.card-pad-b {
@@ -195,16 +199,18 @@ main {
     box-shadow: 1px 1px 5px hsla(1, 0%, 0%, 0.5);
 }
 
-.card .card-img-container {
+/* .card .card-img-container {
     position: relative;
-}
+} */
 
 .card .card-header {
     width: fit-content;
-    position: relative;
+    position: absolute;
     display: flex;
     gap: 0.5rem;
     align-items: center;
+    z-index: 1;
+    top: 0.5rem;
 }
 
 .card .card-header.card-header-right {
@@ -216,17 +222,17 @@ main {
     left: -0.5rem;
 }
 
-/* if header inside img conatiner, position over top of img */
+/* if header inside img conatiner, position over top of img
 .card .card-img-container>.card-header.card-header-right {
     position: absolute;
     top: 1rem;
 }
 
-/* if header inside img conatiner, position over top of img */
+ if header inside img conatiner, position over top of img
 .card .card-img-container>.card-header.card-header-left {
     position: absolute;
     top: 1rem;
-}
+} */
 
 .card .card-header.card-header-lg {
     font-size: 3rem;
@@ -240,17 +246,11 @@ main {
     border-radius: var(--sm-border-radius);
 }
 
-.card-header img {
-    /* display: inline-block; */
-}
-
 .card-header-lg h1 {
-    /* display: inline; */
     font-size: 3rem;
 }
 
 .card-header-sm h1 {
-    /* display: inline; */
     font-size: 2rem;
 }
 
@@ -283,8 +283,8 @@ main {
 .tags {
     display: flex;
     flex-wrap: wrap;
-    margin: 0.5rem 0 0.5rem 0;
     padding: 0;
+    margin: 0;
     gap: 0.25rem;
     list-style: none;
     font-size: 0.75rem;
