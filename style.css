@@ -70,6 +70,16 @@ a {
     color: inherit;
 }
 
+a::after {
+    background-image: url('./images/icons/link-dark-after.svg');
+    display: inline-block;
+    content: ' ';
+    background-size: 1rem 1rem;
+    height: 1rem;
+    width: 1rem;
+    margin: 0 0 0 0.2rem;
+}
+
 a:hover {
     text-decoration: underline;
 }
@@ -192,6 +202,9 @@ main {
 .card .card-header {
     width: fit-content;
     position: relative;
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
 }
 
 .card .card-header.card-header-right {
@@ -227,6 +240,28 @@ main {
     border-radius: var(--sm-border-radius);
 }
 
+.card-header img {
+    /* display: inline-block; */
+}
+
+.card-header-lg h1 {
+    /* display: inline; */
+    font-size: 3rem;
+}
+
+.card-header-sm h1 {
+    /* display: inline; */
+    font-size: 2rem;
+}
+
+.card-header-lg img {
+    height: 2rem;
+}
+
+.card-header-sm img {
+    height: 1.2rem;
+}
+
 .card .card-text-lg {
     font-size: 1.2rem;
     margin: 1rem 0.5rem 1rem 0.5rem;
@@ -248,7 +283,6 @@ main {
 .tags {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
     margin: 0.5rem 0 0.5rem 0;
     padding: 0;
     gap: 0.25rem;
