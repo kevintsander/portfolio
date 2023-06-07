@@ -196,6 +196,19 @@ footer {
         linear-gradient(75deg, var(--card-bg-color2a), var(--card-bg-color2b) 100%);
 }
 
+.card.card-text-lg {
+    font-size: 1.2rem;
+}
+
+.card.card-text-sm {
+    font-size: 1rem;
+}
+
+.card .card-header {
+    font-size: 2em;
+    padding: 0rem 0.5em;
+}
+
 .card-bg-1 .card-header {
     color: var(--dark-text-color);
     background: hsla(135, 60%, 70%, 0.9);
@@ -228,34 +241,17 @@ footer {
     left: -0.5rem;
 }
 
-.card .card-header.card-header-lg {
-    font-size: 3rem;
-    padding: 0rem 0.75rem;
-}
-
-.card .card-header.card-header-sm {
-    font-size: 2rem;
-    padding: 0rem 0.5rem;
-}
-
 .card-header h1 {
     font-size: inherit;
-    margin: 0 0.5em;
+    margin: 0 0.25em;
 }
 
 .card-header img {
     height: 0.6em;
 }
 
-.card .card-text-lg {
-    font-size: 1.2rem;
-    margin: 1rem 0.5rem 1rem 0.5rem;
-    padding: 0;
-}
-
-.card .card-text-sm {
-    font-size: 1rem;
-    margin: 0.5rem 0.5rem 0.5rem 0.5rem;
+.card p {
+    margin: 0.5em;
     padding: 0;
 }
 
