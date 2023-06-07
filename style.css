@@ -1,27 +1,38 @@
 :root {
-    --lg-border-radius: 0.3rem;
-    --sm-border-radius: 0.2rem;
     --html-bg-color: hsl(226, 41%, 10%);
     --body-bg-color: hsla(226, 50%, 98%, 0.1);
     --light-text-color: hsl(226, 40%, 95%);
     --dark-text-color: hsla(226, 10%, 10%);
     --dark-link-color: hsla(226, 75%, 25%);
-    --light-border-color: hsla(226, 40%, 95%, 1);
+
+    --separator-border-color: hsla(226, 40%, 95%, 1);
+
     --card-bg-color1a: hsla(135, 90%, 60%, 0.7);
     --card-bg-color1b: hsla(135, 90%, 60%, 0.6);
     --card-bg-color2a: hsla(340, 80%, 55%, 0.7);
     --card-bg-color2b: hsla(340, 80%, 55%, 0.6);
+
     --tag-bg-color-red: hsla(350, 89%, 55%, 0.9);
     --tag-bg-color-green: hsla(110, 89%, 55%, 0.9);
     --tag-bg-color-blue: hsla(212, 89%, 55%, 0.9);
     --tag-bg-color-purple: hsla(290, 89%, 55%, 0.9);
     --tag-bg-color-orange: hsla(36, 89%, 55%, 0.9);
+
+    --lg-border-radius: 0.3rem;
+    --sm-border-radius: 0.2rem;
+
+    --object-shadow-color: hsla(0, 0%, 0%, 0.5);
+    --card-header-shadow-color: hsla(0, 0%, 0%, 0.3);
+    --card-text-shadow-color: hsla(0, 0%, 0%, 0.1);
+
+    --html-background-img: url('./images/photos/aurora-borealis-bg-3000x2000.jpg');
+    --link-after-img-dark: url('./images/icons/link-dark-after.svg');
 }
 
 
 html {
     box-sizing: border-box;
-    background: url(./images/photos/aurora-borealis-bg-3000x2000.jpg) no-repeat center top fixed var(--html-bg-color);
+    background: var(--html-background-img) no-repeat center top fixed var(--html-bg-color);
     background-color: var(--html-bg-color);
     margin: 1rem;
 }
@@ -38,7 +49,7 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: 'Bebas Neue', sans-serif;
+    font-family: 'Bebas Neue', 'Arial Narrow', 'Arial', sans-serif;
     font-weight: 400;
     margin: 0;
 }
@@ -55,7 +66,7 @@ a:hover {
 }
 
 a::after {
-    background-image: url('./images/icons/link-dark-after.svg');
+    background-image: var(--link-after-img-dark);
     display: inline-block;
     content: ' ';
     background-size: 1em 1em;
@@ -66,7 +77,7 @@ a::after {
 
 /* Images */
 .img-shadow {
-    filter: drop-shadow(1px 1px 3px hsla(1, 0%, 0%, 0.5));
+    filter: drop-shadow(1px 1px 3px var(--object-shadow-color));
 }
 
 .square-img {
@@ -98,12 +109,12 @@ body a {
 /* Header Content */
 header {
     grid-area: header;
-    border-bottom: 1px solid var(--light-border-color);
+    border-bottom: 1px solid var(--separator-border-color);
     display: flex;
     gap: 4rem;
     margin: 1rem;
     align-items: center;
-    text-shadow: 1px 1px 3px hsla(1, 0%, 0%, 0.5);
+    text-shadow: 1px 1px 3px var(--object-shadow-color);
 }
 
 
@@ -160,15 +171,14 @@ footer {
     margin: 0.5rem 0 0 0;
     padding: 0.5rem 0 0 0;
     font-size: .8rem;
-    border-top: 1px solid var(--light-border-color);
+    border-top: 1px solid var(--separator-border-color);
 }
 
 /* Card */
 .card {
     position: relative;
     border-radius: var(--lg-border-radius);
-    box-shadow: 3px 3px 5px -3px rgba(0, 0, 0, 0.5);
-    text-shadow: 1px 1px 3px rgba(129, 129, 129, 0.1);
+    box-shadow: 3px 3px 5px -3px var(--object-shadow-color);
     padding: 0.25rem;
     display: flex;
     flex-direction: column;
@@ -212,13 +222,13 @@ footer {
 .card-bg-1 .card-header {
     color: var(--dark-text-color);
     background: hsla(135, 60%, 70%, 0.9);
-    box-shadow: 1px 1px 5px hsla(1, 0%, 0%, 0.5);
+    box-shadow: 1px 1px 5px var(--object-shadow-color);
 }
 
 .card-bg-2 .card-header {
     color: var(--dark-text-color);
     background: hsla(332, 67%, 60%, 0.9);
-    box-shadow: 1px 1px 5px hsla(1, 0%, 0%, 0.5);
+    box-shadow: 1px 1px 5px var(--object-shadow-color);
 }
 
 .card .card-header {
@@ -244,6 +254,7 @@ footer {
 .card-header h1 {
     font-size: inherit;
     margin: 0 0.25em;
+    text-shadow: 1px 1px 3px var(--card-header-shadow-color);
 }
 
 .card-header img {
@@ -253,6 +264,7 @@ footer {
 .card p {
     margin: 0.5em;
     padding: 0;
+    text-shadow: 1px 1px 3px var(--card-text-shadow-color);
 }
 
 /* Tags */
