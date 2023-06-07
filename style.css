@@ -1,6 +1,7 @@
 :root {
     --lg-border-radius: 0.3rem;
     --sm-border-radius: 0.2rem;
+    --html-bg-color: hsl(226, 41%, 10%);
     --body-bg-color: hsla(226, 50%, 98%, 0.1);
     --light-text-color: hsl(226, 40%, 95%);
     --dark-text-color: hsla(226, 10%, 10%);
@@ -20,7 +21,8 @@
 
 html {
     box-sizing: border-box;
-    background: url(./images/photos/aurora-borealis-bg-3000x2000.jpg) no-repeat center top fixed var(--bg-color1);
+    background: url(./images/photos/aurora-borealis-bg-3000x2000.jpg) no-repeat center top fixed var(--html-bg-color);
+    background-color: var(--html-bg-color);
     margin: 1rem;
 }
 
@@ -30,6 +32,51 @@ html {
     box-sizing: inherit;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-weight: 400;
+    margin: 0;
+}
+
+/* Links */
+a {
+    text-decoration: none;
+    font-weight: bold;
+    color: inherit;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a::after {
+    background-image: url('./images/icons/link-dark-after.svg');
+    display: inline-block;
+    content: ' ';
+    background-size: 1em 1em;
+    height: 1em;
+    width: 1em;
+    margin: 0 0 0 0.2rem;
+}
+
+/* Images */
+.img-shadow {
+    filter: drop-shadow(1px 1px 3px hsla(1, 0%, 0%, 0.5));
+}
+
+.square-img {
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    width: 100%;
+    height: auto;
+}
+
+/* Body */
 body {
     font-family: 'Roboto', sans-serif;
     padding: 1rem;
@@ -44,55 +91,14 @@ body {
     grid: "header sidebar" auto "main sidebar" 1fr "footer footer" auto / 1fr minmax(20rem, 30%);
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    font-family: 'Bebas Neue', sans-serif;
-    font-weight: 400;
-    margin: 0;
-}
-
-a {
-    text-decoration: none;
-    font-weight: bold;
-    color: inherit;
-}
-
-a::after {
-    background-image: url('./images/icons/link-dark-after.svg');
-    display: inline-block;
-    content: ' ';
-    background-size: 1rem 1rem;
-    height: 1rem;
-    width: 1rem;
-    margin: 0 0 0 0.2rem;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
 body a {
     color: var(--dark-link-color)
 }
 
+/* Header Content */
 header {
     grid-area: header;
     border-bottom: 1px solid var(--light-border-color);
-}
-
-main {
-    grid-area: main;
-}
-
-.img-shadow {
-    filter: drop-shadow(1px 1px 3px hsla(1, 0%, 0%, 0.5));
-}
-
-.header-container {
     display: flex;
     gap: 4rem;
     margin: 1rem;
@@ -100,8 +106,9 @@ main {
     text-shadow: 1px 1px 3px hsla(1, 0%, 0%, 0.5);
 }
 
+
+/* Title */
 .title-card {
-    display: inline-block;
     margin: 0 0 2rem 0;
 }
 
@@ -111,13 +118,13 @@ main {
     white-space: nowrap;
 }
 
-.subline {
+.title-subline {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.subline-logo {
+.title-subline-logo {
     height: 3rem;
     width: auto;
     margin: 0 0.2rem;
@@ -128,24 +135,35 @@ main {
     margin: 0.2rem 0 0 0;
 }
 
+/* Main Content */
+main {
+    grid-area: main;
+}
+
+.projects {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
+}
+
+/* Sidebar */
 .sidebar {
     grid-area: sidebar;
     color: var(--light-text-color);
     padding: 1rem;
 }
 
-.square-img {
-    aspect-ratio: 1/1;
-    object-fit: cover;
-    width: 100%;
-    height: auto;
+/* Footer */
+footer {
+    grid-area: footer;
+    color: var(--dark-text-color);
+    margin: 0.5rem 0 0 0;
+    padding: 0.5rem 0 0 0;
+    font-size: .8rem;
+    border-top: 1px solid var(--light-border-color);
 }
 
-.card-header-img {
-    border-radius: var(--lg-border-radius);
-
-}
-
+/* Card */
 .card {
     position: relative;
     border-radius: var(--lg-border-radius);
@@ -156,12 +174,12 @@ main {
     flex-direction: column;
 }
 
-.card .card-content {
-    flex: 1;
+.card img {
+    border-radius: var(--lg-border-radius);
 }
 
-.card.card-pad-b {
-    padding-bottom: 1rem;
+.card .card-content {
+    flex: 1;
 }
 
 .card.card-bg-1 {
@@ -190,10 +208,6 @@ main {
     box-shadow: 1px 1px 5px hsla(1, 0%, 0%, 0.5);
 }
 
-/* .card .card-img-container {
-    position: relative;
-} */
-
 .card .card-header {
     width: fit-content;
     position: absolute;
@@ -202,6 +216,7 @@ main {
     align-items: center;
     z-index: 1;
     top: 0.5rem;
+    border-radius: var(--sm-border-radius);
 }
 
 .card .card-header.card-header-right {
@@ -213,44 +228,23 @@ main {
     left: -0.5rem;
 }
 
-/* if header inside img conatiner, position over top of img
-.card .card-img-container>.card-header.card-header-right {
-    position: absolute;
-    top: 1rem;
-}
-
- if header inside img conatiner, position over top of img
-.card .card-img-container>.card-header.card-header-left {
-    position: absolute;
-    top: 1rem;
-} */
-
 .card .card-header.card-header-lg {
     font-size: 3rem;
-    padding: 0rem 2rem;
-    border-radius: var(--sm-border-radius);
+    padding: 0rem 0.75rem;
 }
 
 .card .card-header.card-header-sm {
     font-size: 2rem;
-    padding: 0rem 1.5rem;
-    border-radius: var(--sm-border-radius);
+    padding: 0rem 0.5rem;
 }
 
-.card-header-lg h1 {
-    font-size: 3rem;
+.card-header h1 {
+    font-size: inherit;
+    margin: 0 0.5em;
 }
 
-.card-header-sm h1 {
-    font-size: 2rem;
-}
-
-.card-header-lg img {
-    height: 2rem;
-}
-
-.card-header-sm img {
-    height: 1.2rem;
+.card-header img {
+    height: 0.6em;
 }
 
 .card .card-text-lg {
@@ -265,12 +259,7 @@ main {
     padding: 0;
 }
 
-.projects {
-    display: grid;
-    gap: 1rem;
-    grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
-}
-
+/* Tags */
 .tags {
     display: flex;
     flex-wrap: wrap;
@@ -291,31 +280,22 @@ main {
     opacity: 0.8;
 }
 
-.red-bg {
+.tag.red-bg {
     background-color: var(--tag-bg-color-red);
 }
 
-.green-bg {
+.tag.green-bg {
     background-color: var(--tag-bg-color-green);
 }
 
-.blue-bg {
+.tag.blue-bg {
     background-color: var(--tag-bg-color-blue);
 }
 
-.purple-bg {
+.tag.purple-bg {
     background-color: var(--tag-bg-color-purple);
 }
 
-.orange-bg {
+.tag.orange-bg {
     background-color: var(--tag-bg-color-orange);
-
-}
-
-footer {
-    grid-area: footer;
-    color: var(--dark-text-color);
-    margin: 0.5rem 0 0 0;
-    padding: 0.5rem 0 0 0;
-    border-top: 1px solid var(--light-border-color);
 }
