@@ -280,22 +280,22 @@ footer {
     opacity: 0.8;
 }
 
-.tag.red-bg {
+.tag.tag-red {
     background-color: var(--tag-bg-color-red);
 }
 
-.tag.green-bg {
+.tag.tag-green {
     background-color: var(--tag-bg-color-green);
 }
 
-.tag.blue-bg {
+.tag.tag-blue {
     background-color: var(--tag-bg-color-blue);
 }
 
-.tag.purple-bg {
+.tag.tag-purple {
     background-color: var(--tag-bg-color-purple);
 }
 
-.tag.orange-bg {
+.tag.tag-orange {
     background-color: var(--tag-bg-color-orange);
 }
