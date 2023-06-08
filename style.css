@@ -9,10 +9,10 @@
 
     --card-bg-color1a: hsla(135, 90%, 60%, 0.7);
     --card-bg-color1b: hsla(135, 90%, 60%, 0.6);
-    --card-header-bg-color1: hsla(135, 90%, 60%, 0.9);
+    --card-header-bg-color1: hsla(135, 90%, 60%, 0.8);
     --card-bg-color2a: hsla(340, 90%, 60%, 0.7);
     --card-bg-color2b: hsla(340, 90%, 60%, 0.6);
-    --card-header-bg-color2: hsla(340, 90%, 60%, 0.9);
+    --card-header-bg-color2: hsla(340, 90%, 60%, 0.8);
 
     --tag-bg-color-red: hsla(350, 89%, 55%, 0.9);
     --tag-bg-color-green: hsla(110, 89%, 55%, 0.9);
@@ -59,15 +59,18 @@ h6 {
 /* Links */
 a {
     text-decoration: none;
-    font-weight: bold;
     color: inherit;
 }
 
-a:hover {
+.link {
+    font-weight: bold;
+}
+
+.link:hover {
     text-decoration: underline;
 }
 
-a::after {
+.link::after {
     background-image: var(--link-after-img-dark);
     display: inline-block;
     content: ' ';
@@ -201,6 +204,7 @@ footer {
 }
 
 .card img {
+    opacity: 0.9;
     border-radius: var(--lg-border-radius);
 }
 
