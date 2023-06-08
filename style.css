@@ -83,7 +83,6 @@ a::after {
 .square-img {
     aspect-ratio: 1/1;
     object-fit: cover;
-    width: 100%;
     height: auto;
 }
 
@@ -91,7 +90,8 @@ a::after {
 body {
     font-family: 'Roboto', sans-serif;
     padding: 1rem;
-    max-width: 80rem;
+    min-width: calc(390px - 2rem);
+    max-width: 1280px;
     background: var(--body-bg-color);
     margin: 0 auto;
     color: var(--light-text-color);
@@ -99,7 +99,12 @@ body {
     box-shadow: 7px 7px 12px -3px rgba(0, 0, 0, 0.1);
 
     display: grid;
-    grid: "header sidebar" auto "main sidebar" 1fr "footer footer" auto / 1fr minmax(20rem, 30%);
+    grid-template-areas:
+        "header sidebar"
+        "main   sidebar"
+        "footer footer";
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: 3fr 1fr;
     gap: 1rem;
 }
 
@@ -121,30 +126,32 @@ header {
 
 /* Title */
 .title-card {
-    margin: 0 0 2rem 0;
+    margin: 2rem 0 2rem 0;
 }
 
 .title {
     font-size: 10rem;
-    margin: 0 0 -2rem 0;
-    white-space: nowrap;
+    line-height: 0.8;
 }
 
 .title-subline {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .title-subline-logo {
     height: 3rem;
     width: auto;
     margin: 0 0.2rem;
+    white-space: nowrap;
 }
 
 .subtitle {
     font-size: 3rem;
     margin: 0.2rem 0 0 0;
+
 }
 
 /* Main Content */
@@ -158,10 +165,18 @@ main {
     grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
 }
 
+.projects .card .card-content img {
+    width: 100%;
+}
+
 /* Sidebar */
 .sidebar {
     grid-area: sidebar;
     color: var(--light-text-color);
+}
+
+.sidebar .card img {
+    width: 100%;
 }
 
 /* Footer */
@@ -305,4 +320,40 @@ footer {
 
 .tag.tag-orange {
     background-color: var(--tag-bg-color-orange);
+}
+
+@media (max-width: 1200px) {
+    body {
+        grid-template-areas:
+            "header"
+            "sidebar"
+            "main"
+            "footer";
+        grid-template-rows: auto auto 1fr auto;
+        grid-template-columns: 1fr;
+    }
+
+    .title {
+        font-size: 7.5rem;
+    }
+
+    .subtitle {
+        font-size: 2.5rem;
+    }
+
+    .title-subline-logo {
+        height: 2.5rem;
+    }
+
+    .sidebar .card img {
+        width: 300px;
+        float: right;
+    }
+}
+
+@media (max-width: 500px) {
+    .sidebar .card img {
+        width: 100%;
+        float: none;
+    }
 }
