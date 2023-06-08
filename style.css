@@ -345,14 +345,16 @@ footer {
     }
 
     .sidebar .card img {
-        width: 300px;
+        width: 250px;
         float: right;
+        margin: 0 0 0.25rem 0.25rem;
     }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 450px) {
     .sidebar .card img {
         width: 100%;
         float: none;
+        margin: 0;
     }
 }
