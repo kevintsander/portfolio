@@ -9,8 +9,10 @@
 
     --card-bg-color1a: hsla(135, 90%, 60%, 0.7);
     --card-bg-color1b: hsla(135, 90%, 60%, 0.6);
-    --card-bg-color2a: hsla(340, 80%, 55%, 0.7);
-    --card-bg-color2b: hsla(340, 80%, 55%, 0.6);
+    --card-header-bg-color1: hsla(135, 90%, 60%, 0.9);
+    --card-bg-color2a: hsla(340, 90%, 60%, 0.7);
+    --card-bg-color2b: hsla(340, 90%, 60%, 0.6);
+    --card-header-bg-color2: hsla(340, 90%, 60%, 0.9);
 
     --tag-bg-color-red: hsla(350, 89%, 55%, 0.9);
     --tag-bg-color-green: hsla(110, 89%, 55%, 0.9);
@@ -229,31 +231,28 @@ footer {
 }
 
 .card .card-header {
+    z-index: 1;
+    width: fit-content;
+    position: absolute;
+    top: 0.5rem;
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
     font-size: 2em;
     padding: 0rem 0.5em;
+    border-radius: var(--sm-border-radius);
 }
 
 .card-bg-1 .card-header {
     color: var(--dark-text-color);
-    background: hsla(135, 60%, 70%, 0.9);
+    background: var(--card-header-bg-color1);
     box-shadow: 1px 1px 5px var(--object-shadow-color);
 }
 
 .card-bg-2 .card-header {
     color: var(--dark-text-color);
-    background: hsla(332, 67%, 60%, 0.9);
+    background: var(--card-header-bg-color2);
     box-shadow: 1px 1px 5px var(--object-shadow-color);
-}
-
-.card .card-header {
-    width: fit-content;
-    position: absolute;
-    display: flex;
-    gap: 0.5rem;
-    align-items: center;
-    z-index: 1;
-    top: 0.5rem;
-    border-radius: var(--sm-border-radius);
 }
 
 .card .card-header.card-header-right {
