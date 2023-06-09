@@ -3,7 +3,7 @@
     --body-bg-color: hsla(226, 50%, 98%, 0.1);
     --light-text-color: hsl(226, 40%, 95%);
     --dark-text-color: hsla(226, 10%, 10%);
-    --dark-link-color: hsla(226, 75%, 25%);
+    --dark-link-color: hsla(135, 90%, 10%);
 
     --separator-border-color: hsla(226, 40%, 95%, 1);
 
@@ -13,6 +13,9 @@
     --card-bg-color2a: hsla(340, 90%, 60%, 0.7);
     --card-bg-color2b: hsla(340, 90%, 60%, 0.6);
     --card-header-bg-color2: hsla(340, 90%, 60%, 0.8);
+    --card-bg-color3a: hsla(200, 60%, 60%, 0.7);
+    --card-bg-color3b: hsla(200, 60%, 60%, 0.6);
+    --card-header-bg-color3: hsla(200, 60%, 60%, 0.8);
 
     --tag-bg-color-red: hsla(350, 89%, 55%, 0.9);
     --tag-bg-color-green: hsla(110, 89%, 55%, 0.9);
@@ -187,10 +190,13 @@ main {
 /* Footer */
 footer {
     grid-area: footer;
-    color: var(--dark-text-color);
     padding: 0.5rem 0 0 0;
     font-size: .8rem;
     border-top: 1px solid var(--separator-border-color);
+}
+
+footer .card-content {
+    font-size: 0.8rem;
 }
 
 /* Card */
@@ -226,6 +232,13 @@ footer {
         linear-gradient(75deg, var(--card-bg-color2a), var(--card-bg-color2b) 100%);
 }
 
+.card.card-bg-3 {
+    color: var(--dark-text-color);
+    background: var(--card-bg-color3a);
+    background:
+        linear-gradient(75deg, var(--card-bg-color3a), var(--card-bg-color3b) 100%);
+}
+
 .card.card-text-lg {
     font-size: 1.2rem;
 }
@@ -245,18 +258,22 @@ footer {
     font-size: 2em;
     padding: 0rem 0.5em;
     border-radius: var(--sm-border-radius);
+    box-shadow: 1px 1px 5px var(--object-shadow-color);
 }
 
 .card-bg-1 .card-header {
     color: var(--dark-text-color);
     background: var(--card-header-bg-color1);
-    box-shadow: 1px 1px 5px var(--object-shadow-color);
 }
 
 .card-bg-2 .card-header {
     color: var(--dark-text-color);
     background: var(--card-header-bg-color2);
-    box-shadow: 1px 1px 5px var(--object-shadow-color);
+}
+
+.card-bg-3 .card-header {
+    color: var(--dark-text-color);
+    background: var(--card-header-bg-color3);
 }
 
 .card .card-header.card-header-right {
