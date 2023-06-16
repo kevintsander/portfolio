@@ -1,3 +1,13 @@
+@font-face {
+    font-family: 'Bebas Neue';
+    src: url(./fonts/BebasNeue-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url(./fonts/Roboto-Regular.ttf);
+}
+
 :root {
     --html-bg-color: hsl(226, 41%, 10%);
     --body-bg-color: hsla(226, 50%, 98%, 0.1);
@@ -207,6 +217,8 @@ footer .card-content {
     padding: 0.25rem;
     display: flex;
     flex-direction: column;
+
+    animation: fade-in ease 1s;
 }
 
 .card img {
@@ -377,5 +389,23 @@ footer .card-content {
         width: 100%;
         float: none;
         margin: 0;
+    }
+}
+
+/* Animations */
+@keyframes fade-in {
+    from {
+        transform: translateY(-50%);
+        opacity: 0;
+    }
+
+    50% {
+        transform: translateY(-50%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
     }
 }
