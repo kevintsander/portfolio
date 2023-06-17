@@ -39,7 +39,7 @@
     --object-shadow-color: hsla(0, 0%, 0%, 0.5);
     --card-header-shadow-color: hsla(0, 0%, 0%, 0.3);
     --card-text-shadow-color: hsla(0, 0%, 0%, 0.1);
-    --img-highlight-color: hsl(226, 40%, 95%);
+    --img-highlight-color: hsla(226, 40%, 95%, 0.8);
 
     --html-background-img: url('./images/photos/aurora-borealis-bg-3000x2000.jpg');
     --link-after-img-dark: url('./images/icons/link-dark-after.svg');
@@ -135,7 +135,7 @@ body {
     grid-template-columns: 3fr 1fr;
     gap: 1rem;
 
-    animation: fade-in ease 2s;
+    animation: fade-in ease 1.5s;
 }
 
 body a {
