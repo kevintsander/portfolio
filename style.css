@@ -234,12 +234,18 @@ footer .card-content {
 }
 
 .card img {
-    opacity: 0.9;
+    opacity: 0.8;
     border-radius: var(--lg-border-radius);
+
+    transition: ease 0.5s;
 }
 
 .card .card-content {
     flex: 1;
+}
+
+.card-content>a:hover>.square-img {
+    opacity: 1;
 }
 
 .card.card-bg-1 {
