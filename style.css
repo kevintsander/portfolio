@@ -43,6 +43,8 @@
 
     --html-background-img: url('./images/photos/aurora-borealis-bg-3000x2000.jpg');
     --link-after-img-dark: url('./images/icons/link-dark-after.svg');
+
+    --card-padding: 0.25rem;
 }
 
 
@@ -226,18 +228,18 @@ footer .card-content {
     position: relative;
     border-radius: var(--lg-border-radius);
     box-shadow: 3px 3px 5px -3px var(--object-shadow-color);
-    padding: 0.25rem;
+    padding: var(--card-padding);
     display: flex;
     flex-direction: column;
 
     animation: fade-down ease 1s;
 }
 
-.card img {
+.card .card-content img {
     opacity: 0.8;
     border-radius: var(--lg-border-radius);
 
-    transition: ease 0.5s;
+    transition: ease 0.2s;
 }
 
 .card .card-content {
@@ -246,6 +248,8 @@ footer .card-content {
 
 .card-content>a:hover>.square-img {
     opacity: 1;
+    margin: calc(var(--card-padding) / -2);
+    width: calc(100% + var(--card-padding));
 }
 
 .card.card-bg-1 {
